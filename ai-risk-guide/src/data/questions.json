@@ -1,0 +1,131 @@
+{
+    "version": 1,
+    "questions": [
+        {
+            "id": "q1",
+            "step": 1,
+            "title": "Hva brukes KI-løsningen hovedsakelig til?",
+            "options": [
+                {
+                    "id": "other_or_unsure",
+                    "riskId": "unsure",
+                    "text": "Annet / Usikker",
+                    "rank": 0
+                },
+                {
+                    "id": "internal_processes",
+                    "riskId": "minimal",
+                    "text": "Forbedre eller automatisere interne prosesser (for eksempel sortering av e-post, anbefaling av innhold, analyse av data)",
+                    "rank": 1
+                },
+                {
+                    "id": "generate_content",
+                    "riskId": "limited",
+                    "text": "Generere innhold for brukere (tekst, bilder, video eller lignende)",
+                    "rank": 2
+                },
+                {
+                    "id": "decision_support",
+                    "riskId": "high",
+                    "text": "Gi beslutningsstøtte eller automatiserte vurderinger om enkeltpersoner",
+                    "rank": 3
+                },
+                {
+                    "id": "analyze_rank",
+                    "riskId": "high",
+                    "text": "Analysere eller rangere personer (for eksempel scoring, profilering eller prioritering)",
+                    "rank": 3
+                },
+                {
+                    "id": "monitor_identify",
+                    "riskId": "high",
+                    "text": "Overvåking eller identifisering av personer (for eksempel ansiktsgjenkjenning)",
+                    "rank": 3
+                }
+            ]
+        },
+        {
+            "id": "q2",
+            "step": 2,
+            "title": "Brukes løsningen hovedsakelig innenfor ett eller flere av følgende områder?",
+            "options": [
+                {
+                    "id": "unsure",
+                    "riskId": "unsure",
+                    "text": "Annet / Usikker",
+                    "rank": 0
+                },
+                {
+                    "id": "minimal",
+                    "text": "Ingen av disse",
+                    "riskId": "minimal",
+                    "rank": 1
+                },
+                { "id": "recruitment", "text": "Rekruttering og arbeidsliv", "riskId": "high", "rank": 3 },
+                { "id": "education", "text": "Utdanning eller opptak", "riskId": "high", "rank": 3 },
+                { "id": "infrastructure", "text": "Drift av kritisk infrastruktur", "riskId": "high", "rank": 3 },
+                { "id": "justice", "text": "Rettssystemet eller politiarbeid","riskId": "high", "rank": 3 },
+                { "id": "services", "text": "Tilgang til viktige tjenester", "riskId": "high", "rank": 3 }
+            ]
+        },
+        {       
+            "id": "q3",
+            "step": 3,
+            "title": "Hvordan påvirker løsningen enkeltpersoner?",
+            "options": [
+                {
+                    "id": "unsure",
+                    "riskId": "unsure",
+                    "text": "Annet / Usikker",
+                    "rank": 0
+                },
+                {
+                    "id": "minimal",
+                    "riskId": "minimal",
+                    "text": "Den har ingen direkte betydning for rettigheter eller tilgang til tjenester",
+                    "rank": 1
+                },
+                {
+                    "id": "limited",
+                    "riskId": "limited",
+                    "text": "Den gir anbefalinger eller støtte, men mennesker tar endelig beslutning",
+                    "rank": 2
+                },
+                {
+                    "id": "high",
+                    "riskId": "high",
+                    "text": "Den tar eller påvirker beslutninger som kan få rettslige eller tilsvarende virkninger",
+                    "rank": 3
+                }
+            ]
+        },
+        {
+            "id": "q4",
+            "step": 4,
+            "title": "Innebærer løsningen noe av det følgende?",
+            "prompt": "- Sosial poengsetting av personer\n– Skadelig påvirkning av menneskers atferd eller underbevissthet\n– Sanntids overvåking eller identifisering av personer ved bruk av biometriske data (for eksempel ansiktsgjenkjenning i offentlige rom)",
+            "options": [
+                {
+                    "id": "unsure",
+                    "riskId": "unsure",
+                    "text": "Annet / Usikker",
+                    "rank": 0
+                },
+                {
+                    "id": "no",
+                    "riskId": "minimal",
+                    "text": "Nei",
+                    "rank": 1
+                },
+                
+                {
+                    "id": "yes",
+                    "riskId": "unacceptable",
+                    "text": "Ja",
+                    "rank": 4
+                }
+            ]
+        }
+    ]
+}
+

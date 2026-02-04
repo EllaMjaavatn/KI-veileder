@@ -1,12 +1,10 @@
-import { useState } from 'react'
+import AiRiskGuide from './AiRiskGuide'
 import './App.css'
 
-function App() {
 
+function App() {
   return (
-    <>
-      <h1>Velkommen til KI veileder</h1>
-    </>
+  <AiRiskGuide />
   )
 }
 

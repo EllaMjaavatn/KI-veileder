@@ -16,16 +16,19 @@ export default function AiQuestionnaire() {
     () => resultsData.results as Record<RiskLevel, ResultCard>,
     [],
   );
+
   const [stepIndex, setStepIndex] = useState(0);
+  const [done, setDone] = useState(false);
+  const question = questions[stepIndex];
   const [answersByQuestion, setAnswersByQuestion] = useState<
     Record<string, string>
   >({});
-  const [done, setDone] = useState(false);
-  const question = questions[stepIndex];
+
   const selectedOption = useMemo(() => {
     const selectedId = answersByQuestion[question.id];
     return question.options.find((o) => o.id === selectedId);
   }, [answersByQuestion, question]);
+
   const ranksSoFar = useMemo(() => {
     return questions
       .filter((q) => answersByQuestion[q.id])
@@ -33,6 +36,7 @@ export default function AiQuestionnaire() {
         (q) => q.options.find((o) => o.id === answersByQuestion[q.id])!.rank,
       );
   }, [answersByQuestion, questions]);
+
   const currentRisk = useMemo(
     () => calculateRisk(ranksSoFar) as RiskLevel,
     [ranksSoFar],
@@ -86,6 +90,7 @@ export default function AiQuestionnaire() {
       </main>
     );
   }
+
   return (
     <main className="container">
       <header className="pageHeader">

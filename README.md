@@ -10,7 +10,7 @@ Du trenger følgende installert i lokalt:
 ## Kom i gang 
 Klone repo og bytt til riktig branch:
 ```bash
-git clone git@github.com:EllaMjaavatn/ai-risk-guide.git
+git clone git@github.com:EllaMjaavatn/KI-veileder.git
 cd KI-veileder
 cd ai-risk-guide
 ```
